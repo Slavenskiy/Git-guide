@@ -1,9 +1,12 @@
 git init - инициализация хранилища
+git status - проверка текущего состояния хранилища на компе.
 
 mkdir hello - Создать каталог hello
 cd hello - перейти в каталог hello
 touch hello.html - создать документ hello.html
 git reset - убирает изменения из хранилища.
-git commit -m "First Commit" - коммит документа(обязательная фиксация для отправки).
 git add hello.html - добавление документа в хранилище (репозиторий).
-git status - проверка текущего состояния хранилища на компе.
+git commit -m "First Commit" - коммит документа(обязательная фиксация для отправки).
+git remote add origin https://github.com/Slavenskiy/name_repository.git
+git push -u origin master
+
