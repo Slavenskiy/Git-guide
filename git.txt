@@ -1,20 +1,32 @@
 clone - клонирует удалённый репозиторий на компьютер. Выполняется один раз.
-commit - сохраняет изменения в репозитории на компьютере.
+commit - делает копию изменений в репозитории на компьютере.
 push - отправляет изменения в удалённый репозиторий.
 pull - скачивает изменения из удалённого репозитория в клонированый на компе.
 discard - сбрасывает все изменения до сохранённого коммита.
 revert - откатывает коммит.
 reset - откатывает все коммиты до начального файла, на локальном репозитории.
 
-
-git init - инициализация хранилища
-git status - проверка текущего состояния хранилища на компе.
-
+__Terminal__
 mkdir hello - Создать каталог hello
 cd hello - перейти в каталог hello
 touch hello.html - создать документ hello.html
-git reset - убирает изменения из хранилища.
-git add hello.html - добавление документа в хранилище (репозиторий).
+
+__For Git__
+git init -                инициализация хранилища
+git status -              проверка текущего состояния хранилища на компе.
+git reset HEAD~1          убирает изменения на один коммит вверх.
+git revert HEAD           изменения на удалённых ветках
+git branch newImg         создание ветки newImg(будет указывать на текущий коммит)
+git checkout newImg       переход на ветку newImg
+git checkout HEAD^        переход по ветке на коммит вверх
+git checkout HEAD~4       переход на 4 коммита вверх
+git branch -f master HEAD~3  перемещение ветки мастер на 3 коммита вверх
+git cherry-pick <Commit1> <Commit2> переносит нужные коммиты в HEAD.
+git rebase -i HEAD~4 --aboveAll  перетасовка коммитов
+git merge newImg          слияние ветки newImg в master
+git merge master          слияние ветки master в newImg
+git rebase master         слияние с веткой master
+git add hello.html -      добавление документа в хранилище (репозиторий).
 git commit -m "First Commit" - коммит документа(обязательная фиксация для отправки).
 git remote add origin https://github.com/Slavenskiy/name_repository.git
 git push -u origin master
